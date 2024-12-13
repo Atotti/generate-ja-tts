@@ -1,0 +1,21 @@
+services:
+  gen-ja-tts:
+    container_name: gen-ja-tts
+    image: atotti/gen-ja-tts:latest
+    working_dir: /root/app
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - .:/root/app
+      - ./container_venv:/root/app/.venv # container内の .venv とホストマシンの .venv を別で管理
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+volumes:
+  .venv:
