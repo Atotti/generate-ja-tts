@@ -48,6 +48,7 @@ JSUTコーパスのBASIC5000というデータでParlerTTSをfine-tuningした�
 
 ## 環境構築
 ローカル環境では[Docker](https://docs.docker.jp/get-started/overview.html)を使う。Google Colabでの環境は考え中。
+おそらく[NVIDIA container toolkit](https://github.com/NVIDIA/nvidia-container-toolkit)が必要になる。
 
 ### build
 ```bash
