@@ -18,7 +18,13 @@ RUN apt-get -y update && apt-get -y upgrade && \
         liblzma-dev \
         liblzma-dev \
         libffi-dev \
-        curl
+        curl \
+        clang \
+        git-lfs \
+        cmake \
+        make \
+        pkg-config \
+        libgoogle-perftools-dev
 
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 

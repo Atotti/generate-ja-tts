@@ -1,0 +1,49 @@
+#!bin/sh
+
+uv run accelerate launch ./training/run_parler_tts_training.py \
+    --model_name_or_path "2121-8/japanese-parler-tts-mini-bate" \
+    --feature_extractor_name "parler-tts/dac_44khZ_8kbps" \
+    --description_tokenizer_name "2121-8/japanese-parler-tts-mini-bate" \
+    --prompt_tokenizer_name "2121-8/japanese-parler-tts-mini-bate" \
+    --overwrite_output_dir true \
+    --train_dataset_name "Atotti/jsut-voiceactress100-datasets" \
+    --train_metadata_dataset_name "Atotti/jsut-voiceactress100-descriptions" \
+    --train_dataset_config_name "default" --train_split_name "train" \
+    --eval_dataset_name "Atotti/jsut-voiceactress100-datasets" \
+    --eval_metadata_dataset_name "Atotti/jsut-voiceactress100-descriptions" \
+    --eval_dataset_config_name "default" \
+    --eval_split_name "train" --max_eval_samples 8 \
+    --per_device_eval_batch_size 4 \
+    --target_audio_column_name "audio" \
+    --description_column_name "text_description" \
+    --prompt_column_name "text" \
+    --max_duration_in_seconds 20 \
+    --min_duration_in_seconds 2.0 \
+    --max_text_length 400 \
+    --preprocessing_num_workers 2 \
+    --do_train true \
+    --num_train_epochs 10 \
+    --gradient_accumulation_steps 18 \
+    --gradient_checkpointing true \
+    --per_device_train_batch_size 2 \
+    --learning_rate 0.0001 \
+    --adam_beta1 0.9 \
+    --adam_beta2 0.99 \
+    --weight_decay 0.01 \
+    --lr_scheduler_type "constant_with_warmup" \
+    --warmup_steps 50 \
+    --logging_steps 1 \
+    --freeze_text_encoder true \
+    --audio_encoder_per_device_batch_size 5 \
+    --dtype "float16" \
+    --seed 456 \
+    --output_dir "./output_dir_training/" \
+    --temporary_save_to_disk "./audio_code_tmp/" \
+    --save_to_disk "./tmp_dataset_audio/" \
+    --dataloader_num_workers 1 \
+    --do_eval \
+    --predict_with_generate \
+    --include_inputs_for_metrics \
+    --group_by_length true \
+    --wandb_project "jsut-voiceactress100" \
+    --wandb_run_name "fine-tuning"

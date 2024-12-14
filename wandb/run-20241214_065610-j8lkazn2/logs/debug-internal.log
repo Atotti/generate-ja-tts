@@ -1,0 +1,8 @@
+{"time":"2024-12-14T06:56:10.43814959Z","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2024-12-14T06:56:10.438282386Z","level":"INFO","msg":"created symlink","path":"/root/app/wandb/run-20241214_065610-j8lkazn2/logs/debug-core.log"}
+{"time":"2024-12-14T06:56:10.645091702Z","level":"INFO","msg":"created new stream","id":"j8lkazn2"}
+{"time":"2024-12-14T06:56:10.645240283Z","level":"INFO","msg":"stream: started","id":"j8lkazn2"}
+{"time":"2024-12-14T06:56:10.646088036Z","level":"INFO","msg":"handler: started","stream_id":"j8lkazn2"}
+{"time":"2024-12-14T06:56:10.647072466Z","level":"INFO","msg":"writer: Do: started","stream_id":"j8lkazn2"}
+{"time":"2024-12-14T06:56:10.647110212Z","level":"INFO","msg":"sender: started","stream_id":"j8lkazn2"}
+{"time":"2024-12-14T06:56:11.012217181Z","level":"INFO","msg":"Starting system monitor"}

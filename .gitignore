@@ -13,4 +13,14 @@ container_venv
 # dataset
 data/
 
+# cache
 .cache
+.local
+output
+tmp_dataset_audio
+audio_code_tmp
+
+output_dir_training
+
+# environ
+.env

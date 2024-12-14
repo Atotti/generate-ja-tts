@@ -1,0 +1,18 @@
+{"time":"2024-12-14T04:34:10.638204357Z","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2024-12-14T04:34:10.638336683Z","level":"INFO","msg":"created symlink","path":"/root/app/wandb/run-20241214_043410-5jx81miw/logs/debug-core.log"}
+{"time":"2024-12-14T04:34:10.851560598Z","level":"INFO","msg":"created new stream","id":"5jx81miw"}
+{"time":"2024-12-14T04:34:10.851707335Z","level":"INFO","msg":"stream: started","id":"5jx81miw"}
+{"time":"2024-12-14T04:34:10.851777678Z","level":"INFO","msg":"handler: started","stream_id":"5jx81miw"}
+{"time":"2024-12-14T04:34:10.853653048Z","level":"INFO","msg":"writer: Do: started","stream_id":"5jx81miw"}
+{"time":"2024-12-14T04:34:10.853722095Z","level":"INFO","msg":"sender: started","stream_id":"5jx81miw"}
+{"time":"2024-12-14T04:34:11.069643379Z","level":"ERROR","msg":"HTTP error","status":403,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2024-12-14T04:34:11.07257718Z","level":"ERROR","msg":"sender: upsertRun:","error":"failed to upsert bucket: returned error 403 Forbidden: {\"errors\":[{\"message\":\"permission denied\",\"path\":[\"upsertBucket\"],\"extensions\":{\"code\":\"PERMISSION_ERROR\"}}],\"data\":{\"upsertBucket\":null}}"}
+{"time":"2024-12-14T04:34:11.098445855Z","level":"INFO","msg":"stream: closing","id":"5jx81miw"}
+{"time":"2024-12-14T04:34:11.099590308Z","level":"ERROR","msg":"sender: upsertConfig: RunRecord is nil"}
+{"time":"2024-12-14T04:34:11.328184821Z","level":"ERROR","msg":"HTTP error","status":404,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2024-12-14T04:34:11.329801654Z","level":"ERROR","msg":"runfiles: CreateRunFiles returned error: returned error 404 Not Found: {\"errors\":[{\"message\":\"project /parler-speech not found during createRunFiles\",\"path\":[\"createRunFiles\"]}],\"data\":{\"createRunFiles\":null}}"}
+{"time":"2024-12-14T04:34:11.335031286Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-12-14T04:34:11.335239493Z","level":"INFO","msg":"handler: closed","stream_id":"5jx81miw"}
+{"time":"2024-12-14T04:34:11.335329609Z","level":"INFO","msg":"writer: Close: closed","stream_id":"5jx81miw"}
+{"time":"2024-12-14T04:34:11.335349779Z","level":"INFO","msg":"sender: closed","stream_id":"5jx81miw"}
+{"time":"2024-12-14T04:34:11.33574229Z","level":"INFO","msg":"stream: closed","id":"5jx81miw"}

@@ -1,5 +1,6 @@
 import argparse
 from src.format_to_datasets import format_to_datasets
+from src.cuda_check import check_cuda
 
 def main():
     # ArgumentParser を作成
@@ -28,6 +29,12 @@ def main():
         help="Name for the exported dataset"
     )
 
+    # "cuda-check" コマンド
+    cuda_check_parser = subparsers.add_parser(
+        "cuda-check",
+        help="Check if CUDA is available"
+    )
+
     # 引数を解析
     args = parser.parse_args()
 
@@ -35,6 +42,9 @@ def main():
     if args.command == "format":
         print(f"Formatting datasets from {args.input_file} to {args.export_name}...")
         format_to_datasets(args.input_file, args.export_name)
+    elif args.command == "cuda-check":
+        check_cuda()
+
 
 if __name__ == "__main__":
     main()

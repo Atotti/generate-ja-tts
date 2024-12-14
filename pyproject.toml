@@ -3,7 +3,36 @@ name = "generate-ja-tts"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = [
-    "datasets>=3.2.0",
+    "accelerate>=1.2.0",
+    "bitsandbytes>=0.45.0",
+    "datasets[audio]>=3.2.0",
+    "g2p>=2.2.0",
+    "llvmlite>=0.43.0",
+    "numba>=0.60.0",
+    "penn>=0.0.14",
+    "pyannote-audio==3.2.0",
+    "transformers==4.46.3",
+    "brouhaha==0.9.0",
+    "numpy<2",
+    "sentencepiece==0.1.96",
+    "descript-audio-codec>=1.0.0",
+    "protobuf>=3.19.6",
+    "rubyinserter",
+    "descript-audiotools>=0.7.2",
+    "wandb>=0.19.1",
+    "evaluate>=0.4.3",
+    "speechbrain>=1.0.2",
+    "librosa>=0.10.2.post1",
+    "torch>=2.5.1",
+    "jiwer>=3.0.5",
+    "flash-attn>=2.7.2.post1",
 ]
+
+[tool.uv.sources]
+brouhaha = { git = "https://github.com/marianne-m/brouhaha-vad" }
+rubyinserter = { git = "https://github.com/getuka/RubyInserter.git" }
+
+[tool.hatch.build.targets.wheel]
+packages = ["parler_tts", "parler_tts"]
