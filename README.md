@@ -15,7 +15,7 @@ JSUTコーパスのBASIC5000というデータでParlerTTSをfine-tuningした�
 - ParlerTTSがどの程度のデータ量で話者性を付与するのに十分な学習ができるかどうか調査する
   - 現実的に収集可能な発話データ数は、一人あがり100発話程度らしい
   - 既存の設定では学習に失敗した場合、エポック数や学習率などについても調査した上で、今後の方針を検討する
-- JVCコーパスの`voiceactress100`が量的にも音素バランス的にも良いかもしれない
+- JSUTコーパスの`voiceactress100`が量的にも音素バランス的にも良いかもしれない
   - JSUTコーパスには、`voiceactress100`の音声が含まれているので、検証段階ではJSUTコーパスの`voiceactress100`のが最適だと考えている
     - **JSUTコーパスの`voiceactress100`の注釈付けを行い、データセットを作成し、fine-tuningを行う**
 
@@ -47,8 +47,8 @@ JSUTコーパスのBASIC5000というデータでParlerTTSをfine-tuningした�
 # Documents
 
 ## 環境構築
-ローカル環境では[Docker](https://docs.docker.jp/get-started/overview.html)を使う。Google Colabでの環境は考え中。
-おそらく[NVIDIA container toolkit](https://github.com/NVIDIA/nvidia-container-toolkit)が必要になる。
+ローカル環境では[Docker](https://docs.docker.jp/get-started/overview.html)を使う。おそらく[NVIDIA container toolkit](https://github.com/NVIDIA/nvidia-container-toolkit)が必要になる。Google Colabでの環境は考え中。
+
 
 ### build
 ```bash
@@ -76,7 +76,6 @@ export HF_TOKEN="your_token"
 ```bash
 docker-compose run --rm gen-ja-tts bash -c "任意のコマンド"
 ```
-シェルから出るには`exit`を実行してください。`--rm`オプションをつけているので、シェルから抜けた時にコンテナは終了します。
 
 ※ 毎回`HF_TOKEN`設定するの面倒だから良い感じの方法考え中
 
@@ -94,6 +93,7 @@ uv run main.py format --input_file data/voiceactress100.csv --export_name Atotti
 1. タグ付け
 2. 連続変数を離散的なキーワードにマッピング
 3. LLMを用いた説明文の生成
+
 内容の詳細は[Natural language guidance of high-fidelity text-to-speech with synthetic annotations](https://arxiv.org/abs/2402.01912)を参照。実際にはこの論文の実装である[dataspeech](https://github.com/huggingface/dataspeech)を利用している。
 
 ### タグ付け
@@ -128,4 +128,18 @@ sh train.sh
 ```
 
 ## 合成音生成
+### 一つの音声を生成する場合
+```bash
+sh gen.sh
+```
 
+### ecapaスコアが高い音声を生成する場合
+```bash
+uv run main.py generate-high-score
+```
+
+## 混合行列の作成
+`audios/`にある音声ファイルを用いて混合行列を作成する。
+```bash
+uv run main.py plot-ecapa-confusion-matrix
+```

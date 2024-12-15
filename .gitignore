@@ -19,7 +19,7 @@ data/
 output
 tmp_dataset_audio
 audio_code_tmp
-
+pretrained_models
 output_dir_training
 
 # environ

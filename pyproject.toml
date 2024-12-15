@@ -28,6 +28,7 @@ dependencies = [
     "torch>=2.5.1",
     "jiwer>=3.0.5",
     "flash-attn>=2.7.2.post1",
+    "seaborn>=0.13.2",
 ]
 
 [tool.uv.sources]
