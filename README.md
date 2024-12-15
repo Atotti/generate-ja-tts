@@ -126,3 +126,6 @@ uv run wandb login
 ```bash
 sh train.sh
 ```
+
+## 合成音生成
+

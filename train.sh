@@ -22,7 +22,7 @@ uv run accelerate launch ./training/run_parler_tts_training.py \
     --max_text_length 400 \
     --preprocessing_num_workers 2 \
     --do_train true \
-    --num_train_epochs 10 \
+    --num_train_epochs 100 \
     --gradient_accumulation_steps 18 \
     --gradient_checkpointing true \
     --per_device_train_batch_size 2 \

@@ -21,3 +21,10 @@ config: {}
 2024-12-14 06:56:11,686 INFO    MainThread:17992 [wandb_run.py:_redirect():2314] Redirects installed.
 2024-12-14 06:56:11,706 INFO    MainThread:17992 [wandb_init.py:init():916] run started, returning control to user process
 2024-12-14 06:56:11,765 INFO    MainThread:17992 [wandb_run.py:_config_callback():1279] config_cb None None {'learning_rate': 0.0001, 'model_name_or_path': '2121-8/japanese-parler-tts-mini-bate', 'num_train_epochs': 10.0, 'gradient_accumulation_steps': 18, 'per_device_train_batch_size': 2, 'global_batch_size': 2, 'mixed_precision': 'fp16', 'lr_scheduler_type': 'CONSTANT_WITH_WARMUP', 'warmup_steps': 50, 'freeze_text_encoder': True, 'max_duration_in_seconds': 20.0, 'weight_decay': 0.01, 'adam_beta1': 0.9, 'adam_beta2': 0.99, 'temperature': 1.0}
+2024-12-14 07:58:37,477 INFO    MainThread:17992 [wandb_run.py:_finish():2100] finishing run atotti-test-team/jsut-voiceactress100/j8lkazn2
+2024-12-14 07:58:37,478 INFO    MainThread:17992 [wandb_run.py:_atexit_cleanup():2339] got exitcode: 0
+2024-12-14 07:58:37,479 INFO    MainThread:17992 [wandb_run.py:_restore():2321] restore
+2024-12-14 07:58:37,479 INFO    MainThread:17992 [wandb_run.py:_restore():2327] restore done
+2024-12-14 07:58:40,531 INFO    MainThread:17992 [wandb_run.py:_footer_history_summary_info():3892] rendering history
+2024-12-14 07:58:40,532 INFO    MainThread:17992 [wandb_run.py:_footer_history_summary_info():3924] rendering summary
+2024-12-14 07:58:40,538 INFO    MainThread:17992 [wandb_run.py:_footer_sync_info():3853] logging synced files
