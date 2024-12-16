@@ -22,5 +22,7 @@ audio_code_tmp
 pretrained_models
 output_dir_training
 
+wandb
+
 # environ
 .env

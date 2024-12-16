@@ -47,7 +47,9 @@ JSUTコーパスのBASIC5000というデータでParlerTTSをfine-tuningした�
 # Documents
 
 ## 環境構築
-ローカル環境では[Docker](https://docs.docker.jp/get-started/overview.html)を使う。おそらく[NVIDIA container toolkit](https://github.com/NVIDIA/nvidia-container-toolkit)が必要になる。Google Colabでの環境は考え中。
+ローカル環境では[Docker](https://docs.docker.jp/get-started/overview.html)を使う。おそらく[NVIDIA container toolkit](https://github.com/NVIDIA/nvidia-container-toolkit)が必要になる。
+
+Google Colabでの実行方法は`generate_ja_tts.ipynb`を参照。Google Colabでも学習が行える事を確認した。むしろColabの方が環境構築も楽だしGPUも強いから学習も速いしで良いかもしれない。
 
 
 ### build
