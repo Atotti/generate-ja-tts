@@ -31,6 +31,12 @@ def main():
         required=True,
         help="Name for the exported dataset"
     )
+    format_parser.add_argument(
+        "--name",
+        type=str,
+        required=True,
+        help="Name of the dataset"
+    )
 
     # "cuda-check" コマンド
     cuda_check_parser = subparsers.add_parser(
@@ -87,7 +93,7 @@ def main():
     # コマンドごとの処理
     if args.command == "format":
         print(f"Formatting datasets from {args.input_file} to {args.export_name}...")
-        format_to_datasets(args.input_file, args.export_name)
+        format_to_datasets(args.input_file, args.export_name, args.name)
     elif args.command == "cuda-check":
         check_cuda()
     elif args.command == "generate":

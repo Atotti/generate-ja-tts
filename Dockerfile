@@ -28,6 +28,6 @@ RUN apt-get -y update && apt-get -y upgrade && \
 
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 RUN uv python install $PYTHON_VERSION
-
+ENV HF_HUB_CACHE /root/app/.cache/huggingface
 
 CMD ["sleep", "INF"]
