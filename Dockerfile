@@ -1,6 +1,6 @@
 FROM nvidia/cuda:12.1.0-cudnn8-devel-ubuntu22.04
 
-ARG PYTHON_VERSION=3.10
+ARG PYTHON_VERSION=3.11
 ENV DEBIAN_FRONTEND=noninteractive
 
 ENV HOME /app
@@ -27,5 +27,7 @@ RUN apt-get -y update && apt-get -y upgrade && \
         libgoogle-perftools-dev
 
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+RUN uv python install $PYTHON_VERSION
+
 
 CMD ["sleep", "INF"]
