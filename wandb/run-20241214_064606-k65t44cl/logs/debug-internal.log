@@ -1,3 +1,0 @@
-{"time":"2024-12-14T06:46:06.315169831Z","level":"INFO","msg":"using version","core version":"0.19.1"}
-{"time":"2024-12-14T06:46:06.315314273Z","level":"INFO","msg":"created symlink","path":"/root/app/wandb/run-20241214_064606-k65t44cl/logs/debug-core.log"}
-{"time":"2024-12-14T06:46:06.315477875Z","level":"ERROR+4","msg":"stream_init: failed to fetch credentials: couldn't get API key: settings: failed to get API key from netrc: open /app/.netrc: no such file or directory"}
