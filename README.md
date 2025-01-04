@@ -84,7 +84,7 @@ docker-compose run --rm gen-ja-tts bash -c "任意のコマンド"
 ## データセットの作成
 `dataset/data/<name>/`に収録したデータを配置する。`data/`以下は git で追跡しないようにしてある。
 ```bash
-uv run format --input_file dataset/voiceactress100_ex.csv --export_name Atotti/ほげほげ --name ふがふが
+uv run main.py format --input_file dataset/voiceactress100_ex.csv --export_name Atotti/ほげほげ --name ふがふが
 ```
 
 ## 注釈付けの実行
