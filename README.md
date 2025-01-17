@@ -6,7 +6,7 @@ JSUTコーパスのBASIC5000というデータでParlerTTSをfine-tuningした�
 ## Road Map
 - [x] Step 1. 読み上げテキストの選択・データ数の検証
 - [x] Step 2. データセットの作成
-- [ ] Step 3. fine-tuning of TTS model
+- [x] Step 3. fine-tuning of TTS model
 - [ ] Step 4. 評価
 - [ ] Step 5. 発表準備
 
