@@ -16,7 +16,7 @@ data/
 # cache
 .cache
 .local
-output
+output*
 tmp_dataset_audio
 audio_code_tmp
 pretrained_models
@@ -26,3 +26,6 @@ wandb
 
 # environ
 .env
+
+dataset_raw/
+memo

@@ -1,0 +1,8 @@
+Average SNR (dB): 40.1484
+Average PESQ: 2.2522
+SNR Std Dev: 5.2191
+PESQ Std Dev: 0.4279
+SNR Min: 32.3687
+SNR Max: 53.3492
+PESQ Min: 1.3914
+PESQ Max: 3.3904

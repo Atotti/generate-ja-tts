@@ -1,0 +1,9 @@
+Score Statistics
+=================
+Mean: 0.6911
+Median: 0.6890
+Standard Deviation: 0.0679
+Minimum: 0.5258
+Maximum: 0.8684
+25th Percentile (Q1): 0.6392
+75th Percentile (Q3): 0.7414
